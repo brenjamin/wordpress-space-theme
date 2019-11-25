@@ -1,0 +1,90 @@
+.form {
+
+    padding: 0px 0px rem-calc(30);
+      &__text {
+        color: $color-gray-alt;
+        @include font-size(18px);
+        line-height: 24px;
+      }
+    &__input {
+        @include fontSize(18px);
+        width: 100%;
+        background-color: $color-light-gray;
+        border-radius: rem-calc(1);
+        
+        border: 0;
+        font-family: $font-main;
+        padding: rem-calc(20);
+    }
+
+    &-group {
+        margin-bottom: rem-calc(23);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 2rem 0;
+    }
+
+    &-control {
+        padding: 2rem 1rem;
+        font-size: 1.6rem;
+        border-radius: 0;
+    }
+
+    
+
+    &__dropdown {
+        width: 100%;
+        padding: rem-calc(20);
+        -webkit-appearance: none;
+        background: url('../img/form-dropdown-triangle.svg');
+        background-color: $color-light-gray;
+        background-position: 98% 50%;
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+    }
+
+    select:required:invalid {
+        color: gray;
+      }
+
+      option[value=""][disabled] {
+        display: none;
+        color: gray !important;
+      }
+
+    .error {
+        color: red;
+    }
+    .error-border {
+        border: 2px solid red;
+    }
+    
+    @-webkit-keyframes autofill-valid {
+        to {
+          /* Background image copied from: node_modules/bootstrap/dist/css/bootstrap.css selector: .was-validated .form-control:valid, .form-control.is-valid */
+          background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") no-repeat;
+          background-size: 20px 20px;
+          background-repeat: no-repeat;
+            background-position: center right calc(0.375em + 0.1875rem);
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+      }
+      @-webkit-keyframes autofill-invalid {
+        to {
+          /* Background image copied from: node_modules/bootstrap/dist/css/bootstrap.css selector: .was-validated .form-control:invalid, .form-control.is-invalid */
+          background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23E9020B' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") no-repeat;
+          background-repeat: no-repeat;
+            background-position: center right calc(0.375em + 0.1875rem);
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+        }
+      }
+      input.is-valid:-webkit-autofill {
+        -webkit-animation-name: autofill-valid;
+        -webkit-animation-fill-mode: both;
+      }
+      input.is-invalid:-webkit-autofill {
+        -webkit-animation-name: autofill-invalid;
+        -webkit-animation-fill-mode: both;
+      }
+}

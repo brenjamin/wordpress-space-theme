@@ -1,0 +1,55 @@
+.icon-block {
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+    margin-bottom: rem-calc(30);
+    
+    
+    
+    @include media-breakpoint-up(md) {
+        @include make-col-ready();
+        @include make-col(6);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &__icon {
+        min-width: rem-calc(59);
+        margin-right: rem-calc(10);
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        
+        &--thermometer {
+            text-align: center;
+            img {
+                @include media-breakpoint-up(lg) {
+                    position: relative;
+                    left: -6px;
+                }
+                
+            }
+        }
+
+        &--contacts {
+
+            @include media-breakpoint-down(sm) {
+                align-self: flex-start;
+            }
+            img {
+                @include media-breakpoint-up(lg) {
+                    position: relative;
+                    left: -6px;
+                }
+                
+            }
+            
+        }
+    }
+
+    &__text {
+        
+        padding-right: rem-calc(40);
+    }
+    
+}

@@ -1,0 +1,20 @@
+{
+  "name": "space-traveler-site",
+  "version": "1.0.0",
+  "description": "Website for space travelers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bbrophy@dudnyk.git.beanstalkapp.com/ben-wordpress-acf-blocks-test-site.git"
+  },
+  "author": "Ben",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.1"
+  }
+}

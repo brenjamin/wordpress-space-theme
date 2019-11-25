@@ -1,0 +1,22 @@
+.buttons {
+    @include make-row();
+}
+
+.callouts {
+    padding-top: rem-calc(36);
+    padding-bottom: rem-calc(41);
+    background-color: $color-xelpros-green;
+
+    &__wrapper {
+        @include make-row();
+    }
+    .callout {
+        @include make-col-ready();
+        @include make-col(12);
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+        
+    }
+}

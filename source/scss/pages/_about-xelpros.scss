@@ -1,0 +1,27 @@
+#about-graph {
+    margin-bottom: rem-calc(45);
+    @include media-breakpoint-up(md) {
+        @include make-col-ready();
+        @include make-col(7);
+    }
+    
+}
+
+#about-graph-line {
+    margin-bottom: rem-calc(15);
+    margin-left: 0;
+}
+
+#about-graph-text {
+    
+    @include media-breakpoint-up(md) {
+        @include make-col-ready();
+        @include make-col(5);
+        
+    }
+}
+
+#about-callout {
+    padding-left: rem-calc(15);
+    margin-bottom: 0;
+}

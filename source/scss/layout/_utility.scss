@@ -1,0 +1,33 @@
+.utility {
+
+
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        @include media-breakpoint-up(xl) {
+            justify-content: flex-end;
+        }
+    }
+
+    
+
+    .nav-link {
+        text-decoration: none;
+        color: $color-space-light-blue;
+        padding: rem-calc(10) rem-calc(15);
+        @include fontSize(20px);
+        font-family: $font-headers;
+        
+        &:hover {
+            text-decoration: none;
+            color: lighten($color-space-light-blue, 5%);
+            text-shadow: rem-calc(8) rem-calc(8) rem-calc(40) $color-space-light-blue, rem-calc(-8) rem-calc(-8) rem-calc(40) $color-space-light-blue;
+        }
+    }
+    .nav-item:last-child .nav-link {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before,
+ul,
+p,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body,html {
+    overflow-y: scroll;
+}
+
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, #000761 39%, #9f45b0 50%, #000761 61%);
+    background-repeat: no-repeat;
+}
+
+body > *:not(#wpadminbar) {
+    max-width: rem-calc(1224);
+    margin: 0 auto;
+
+    // @include media-breakpoint-down(xs) {
+    //     padding-left: rem-calc(15);
+    //     padding-right: rem-calc(15);
+    // }
+}
+
+// #44008B

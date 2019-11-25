@@ -1,0 +1,91 @@
+.subpage {
+    padding-top: rem-calc(50);
+    
+
+    &__text {
+        font-family: $font-main;
+        @include fontSize(18px);
+        line-height: 24px;
+        color: $color-gray;
+    }
+
+    &__callout {
+        @include fontSize(24px);
+        line-height: 28px;
+        color: $color-xelpros-green;
+        font-family: $font-narrow;
+        font-weight: bold;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: rem-calc(25);
+
+        @include media-breakpoint-up(lg) {
+            &--no-padding {
+                padding-left: 0;
+            }
+        }
+        
+    }
+
+    &__list-item {
+        
+        &::before {
+            content: "\2022";
+            color: $color-xelpros-green;
+            position: absolute;
+            
+
+        }
+        span {
+            padding-left: rem-calc(11);
+            display: inline-block;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: rem-calc(6);
+        }
+
+        &--margin {
+            margin-bottom: rem-calc(6);
+        }
+        
+    }
+
+    &__image {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        &--left {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__subhead {
+        font-weight: bold;
+    }
+
+    &__subhead--blue {
+        @include fontSize(28px);
+        text-transform: uppercase;
+        color: $color-xelpros-blue;
+        font-family: $font-narrow;
+        line-height: 1;
+        
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &--flex-start {
+            align-items: flex-start;
+        }
+    }
+
+}

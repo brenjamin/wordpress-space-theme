@@ -1,0 +1,29 @@
+.billboard {
+    position: relative;
+    
+    &__image {
+        max-width: 100%;
+    }
+
+    &__headings {
+        text-align: center;
+        @include absCenter;
+        color: $color-white;
+        width: 100%;
+    }
+
+    &__headline {
+        @include fontSize(45px);
+        @include media-breakpoint-up(sm) {
+            @include fontSize(75px);
+        }
+        
+    }
+
+    &__subhead {
+        @include fontSize(32px);
+        @include media-breakpoint-up(sm) {
+            @include fontSize(45px);
+        }
+    }
+}

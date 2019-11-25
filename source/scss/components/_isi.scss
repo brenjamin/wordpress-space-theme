@@ -1,0 +1,32 @@
+.isi {
+    @include fontSize(18px);
+    line-height: 1.333;
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(50);
+
+    &__subhead {
+        color: $color-xelpros-blue;
+        font-weight: bold;
+        font-family: $font-narrow;
+        margin: 0;
+        @include fontSize(18px);
+
+        &--margin {
+            margin-bottom: rem-calc(10);;
+        }
+    }
+
+    &__text {
+        color: $color-gray;
+        
+    }
+
+    &__pi-link:link,
+    &__pi-link:visited,
+    &__pi-link:hover,
+    &__pi-link:active {
+        color: $color-xelpros-blue;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,94 @@
+.custom-radio {
+    &__real-radio {
+        display: none;
+    }
+    &__label-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__label {
+        cursor: pointer;
+        display: flex;
+        &--2 {
+            margin-left: 2rem;
+        }
+    }
+    &__label-text {
+        text-transform: uppercase;
+    }
+    &__real-radio--1:checked ~ &__label-container > &__label--1 > &__custom--1,
+    &__real-radio--1-cond:checked ~ &__label-container > &__label--1-cond > &__custom--1-cond {
+        background-color: $color-orange;
+    }
+    &__real-radio--1:checked ~ &__label-container > &__label--2 > &__custom--2,
+    &__real-radio--1-cond:checked ~ &__label-container > &__label--2-cond > &__custom--2-cond {
+        background-color: $color-white;
+    }
+
+    &__real-radio--2:checked ~ &__label-container > &__label--2 > &__custom--2,
+    &__real-radio--2-cond:checked ~ &__label-container > &__label--2-cond > &__custom--2-cond {
+        background-color: $color-orange;
+    }
+    &__real-radio--2:checked ~ &__label-container > &__label--1 > &__custom--1,
+    &__real-radio--2-cond:checked ~ &__label-container > &__label--1-cond > &__custom--1-cond {
+        background-color: $color-white;
+    }
+
+    &__real-radio--1:checked ~ &__label-container > &__label--1 > &__custom--1 > &__img,
+    &__real-radio--1-cond:checked ~ &__label-container > &__label--1-cond > &__custom--1-cond > &__img--cond {
+        @include visible;
+    }
+    &__real-radio--1:checked ~ &__label-container > &__label--2 > &__custom--2 > &__img,
+    &__real-radio--1-cond:checked ~ &__label-container > &__label--2-cond > &__custom--2-cond > &__img--cond {
+        @include invisible;
+    }
+
+    &__real-radio--2:checked ~ &__label-container > &__label--2 > &__custom--2 > &__img,
+    &__real-radio--2-cond:checked ~ &__label-container > &__label--2-cond > &__custom--2-cond > &__img--cond {
+        @include visible;
+    }
+    
+    &__real-radio--2:checked ~ &__label-container > &__label--1 > &__custom--1 > &__img,
+    &__real-radio--2-cond:checked ~ &__label-container > &__label--1-cond > &__custom--1-cond > &__img--cond {
+        @include invisible;
+    }
+
+    &__header {
+        font-weight: bold;
+    }
+
+    &__custom {
+        width: 2.2rem;
+        height: 2.2rem;
+        background-color: #fff;
+        margin-right: 1rem;
+        margin-top: .3rem;
+        transition: all .2s;
+        cursor: pointer;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    &__img, &__img--cond {
+        transition: all .2s;
+        @include absCenter;
+        width: 1.3rem;
+        @include invisible;
+    }
+
+    &__conditional {
+        display: none;
+    }
+
+    &__real-radio--1:checked ~ &__conditional {
+        display: block;
+    }
+
+    &__label--2-cond {
+        margin-left: 2rem;
+    }
+
+    .error {
+        width: 100%;
+    }
+}

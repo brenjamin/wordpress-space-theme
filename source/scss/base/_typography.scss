@@ -1,0 +1,19 @@
+body {
+    font-family: $font-main;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+sup {
+    font-size: 60%;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+

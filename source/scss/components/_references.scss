@@ -1,0 +1,21 @@
+.references {
+    padding-bottom: rem-calc(50);
+    position: relative;
+
+    &__text {
+        color: $color-gray;
+        font-size: 12px;
+        line-height: 14px;
+        
+    }
+
+    &__leading-superscript {
+        position: absolute;
+        left: rem-calc(-6);
+        top: rem-calc(-2);
+    }
+
+    sup {
+        font-size: 80%;
+    }
+}

@@ -1,0 +1,70 @@
+.modal {
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .3);
+    font-size: 1.8rem;
+    transition: all .3s;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.open > &__content {
+        animation: modalSlideDown 1s .3s forwards;
+    }
+
+    &__content {
+        width: 100%;
+        text-align: center;
+        padding: 6rem 4rem;
+        background-color: $color-white;
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        @include media-breakpoint-up(md) {
+            width: 75%;
+        }
+        border: 4px solid $color-dark-brown;
+    }
+    &__callout {
+        font-weight: bold;
+        color: $color-dark-blue;
+    }
+    &__button {
+        display: inline-block;
+        border: 3px solid $color-dark-blue;
+        color: $color-dark-blue;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
+        background-color: $color-x-light-blue;
+        transition: all .3s;
+        font-weight: bold;
+        &:hover {
+            color: $color-white;
+            background-color: $color-dark-blue;
+            text-decoration: none;
+        }
+    }
+
+
+    &__exit {
+        display: block;
+        cursor: pointer;
+        
+    }
+
+    #modal-exit {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}

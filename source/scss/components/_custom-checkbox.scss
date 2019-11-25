@@ -1,0 +1,42 @@
+.custom-checkbox {
+    
+    &__checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__real-checkbox {
+        display: none;
+    }
+
+    
+    &__real-checkbox:checked + &__checkbox-label > &__custom > &__img {
+        @include visible;
+    }
+
+    &__checkbox-text {
+        margin: 0;
+        display: inline-block;
+        cursor: pointer;
+        
+    }
+
+    &__custom {
+        min-width: 2.2rem;
+        height: 2.2rem;
+        background-color: $color-light-gray;
+        margin-right: 2rem;
+        margin-top: .3rem;
+        transition: all .2s;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__img {
+        transition: all .2s;
+        @include absCenter;
+        width: rem-calc(20);
+        @include invisible;
+    }
+}
